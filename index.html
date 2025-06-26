@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mossleies Care | Green Spaces, Made Soft</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+        
+        :root {
+            --primary: #3a5a40;
+            --secondary: #588157;
+            --accent: #a3b18a;
+            --light: #dad7cd;
+            --dark: #344e41;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('s4.jpeg') center/cover no-repeat;
+            height: 80vh;
+        }
+        
+        .moss-texture {
+            background: linear-gradient(rgba(218, 215, 205, 0.9), rgba(218, 215, 205, 0.9)), url('https://images.unsplash.com/photo-1508780709619-79562169bc64?ixlib=rb-4.0.3') center/cover no-repeat;
+        }
+        
+        .nav-link:hover {
+            color: var(--accent) !important;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: scale(1.03);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--dark);
+            transform: translateY(-2px);
+        }
+        
+        footer {
+            background-color: var(--dark);
+        }
+        
+        .tip-card {
+            border-left: 4px solid var(--accent);
+        }
+        
+        .disclaimer {
+            font-size: 0.8rem;
+            background-color: var(--light);
+        }
+
+        .consultant-img {
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .consultant-img:hover {
+            transform: scale(1.05);
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .form-input:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 2px rgba(163, 177, 138, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <div>
+                        <span class="text-2xl font-bold text-gray-800">Moss<span class="text-green-700">leies</span> Care</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                  <a href="index.html" class="text-green-700 nav-link font-medium" tabindex="0" aria-current="page">Home</a>
+                    <a href="privacy.html"class="text-gray-800 nav-link font-medium" tabindex="0 ">Privacy</a>
+                    <a href="terms.html" class="text-gray-800 nav-link font-medium" tabindex="0">Terms & Conditions</a>
+                    <a href="cookies.html" class="text-gray-800 nav-link font-medium" tabindex="0">Cookies</a>
+                    <a href="contact.html" class="text-gray-800 nav-link font-medium" tabindex="0">Contact Us</a>
+                    <div class="relative">
+                        <input type="text" placeholder="Search..." class="px-4 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-green-500 text-sm">
+                        <button class="absolute right-3 top-2 text-gray-500">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="outline-none mobile-menu-button">
+                        <svg class="w-6 h-6 text-gray-800" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                            <path d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+       
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero flex items-center justify-center text-center text-white" id="home">
+        <div class="container mx-auto px-6">
+            <h1 class="text-5xl font-bold mb-6">Green Spaces, Made Soft</h1>
+            <h2 class="text-2xl mb-8">Transforming your environment with nature's finest velvet</h2>
+            <p class="mb-8 text-lg max-w-2xl mx-auto">At Mossleies Care, we believe that the gentle touch of nature can transform any space into a sanctuary of tranquility. Our expert team combines scientific knowledge with artistic vision to create living masterpieces that bring the soothing essence of the forest to urban environments.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#consultation" class="btn-primary px-6 py-3 rounded-full font-semibold">Get Your Free Consultation</a>
+                <a href="#services" class="bg-white text-green-800 px-6 py-3 rounded-full font-semibold">Explore Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us - Expanded Content -->
+    <section class="py-16 bg-white" id="about">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">About Mossleies Care</h2>
+            <div class="flex flex-col md:flex-row items-center mb-16">
+                <div class="md:w-1/2 mb-8 md:mb-0 px-4">
+                    <img src="p1.png" alt="Moss garden" class="rounded-lg shadow-xl w-full h-auto">
+                </div>
+                <div class="md:w-1/2 px-4">
+                    <h3 class="text-2xl font-semibold mb-4">Our Story</h3>
+                    <p class="mb-4">Founded in 2015, Mossleies Care began as a small team of horticulture enthusiasts with a passion for creating serene, textured landscapes. The name "Mossleies" combines "Moss" with "Pleasantly," embodying our philosophy that green spaces should be as soft to the touch as they are pleasing to the eye.</p>
+                    <p class="mb-4">What started as a specialty service for boutique hotels and meditation centers has grown into a full-service landscape design firm serving residential and commercial clients throughout the New York metropolitan area.</p>
+                    <div class="bg-green-100 p-4 rounded-lg mb-4">
+                        <p class="font-medium">"Our mission is to reintroduce the primal comfort of nature into modern living spaces through the medium of moss and other gentle ground covers."</p>
+                    </div>
+                    <p>Our team now includes 14 certified horticulturists, 6 landscape architects, and dozens of dedicated maintenance specialists - all united by our love for creating living art with moss and other softscape elements. We've completed over 350 urban greening projects with a 98% customer satisfaction rate.</p>
+                </div>
+            </div>
+
+            <!-- Our Values Section -->
+            <div class="mt-12">
+                <h3 class="text-2xl font-semibold mb-6 text-center">Our Core Values</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 p-6 rounded-lg text-center">
+                        <div class="w-16 h-16 bg-green-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-leaf text-green-700 text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-medium mb-2">Ecological Harmony</h4>
+                        <p>We design with native species and sustainable practices to create landscapes that support local biodiversity while requiring minimal resources to maintain.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg text-center">
+                        <div class="w-16 h-16 bg-green-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-hands-helping text-green-700 text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-medium mb-2">Client Collaboration</h4>
+                        <p>Every project begins with listening. We work closely with clients to understand their vision and needs before creating customized solutions.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg text-center">
+                        <div class="w-16 h-16 bg-green-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-seedling text-green-700 text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-medium mb-2">Continuous Growth</h4>
+                        <p>Our team regularly participates in research and education to stay at the forefront of horticultural innovation and sustainable design.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services - Expanded Content -->
+    <section class="py-16 moss-texture" id="services">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Our Specialized Services</h2>
+            <p class="text-center mb-12 max-w-3xl mx-auto">From intimate residential gardens to expansive commercial installations, we offer comprehensive moss and shade garden solutions tailored to your specific environment and aesthetic preferences.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 - Expanded -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden service-card transition duration-300">
+                    <img src="s1.jpeg" alt="Shade garden" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Shade Garden Design</h3>
+                        <p class="text-gray-600 mb-4">Transform those dark corners into lush, vibrant moss gardens that thrive without direct sunlight.</p>
+                        <ul class="mb-4 space-y-2">
+                            <li class="flex items-start">
+                                <span class="text-green-600 mr-2">✓</span>
+                                <span>Comprehensive native species selection customized for your microclimate</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-600 mr-2">✓</span>
+                                <span>Detailed site analysis including moisture mapping and light exposure assessment</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-600 mr-2">✓</span>
+                                <span>Year-round maintenance plans with seasonal adjustments</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-600 mr-2">✓</span>
+                                <span>Water retention solutions for sustainable care</span>
+                            </li>
+                        </ul>
+                        <div class="flex justify-between items-center">
+                            <span class="font-semibold">Starting at $2,500</span>
+                            <a href="#" class="text-green-700 font-medium hover:underline">Learn more →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 2 - Expanded -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden service-card transition duration-300">
+                    <img src="s2.jpeg" alt="Zen garden" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Zen Space Creation</h3>
+                        <p class="text-gray-600 mb-4">Craft serene meditation spaces using carefully selected moss varieties and complementary elements.</p>
+                        <ul class="mb-4 space-y-2">
+                            <li class="flex items-start">
+                                <span class="text-green-600 mr-2">✓</span>
+                                <span>Authentic Japanese garden techniques with modern adaptations</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-600 mr-2">✓</span>
+                                <span>Custom stone placement following traditional principles</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-600 mr-2">✓</span>
+                                <span>Multisensory design incorporating sound and scent considerations</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-600 mr-2">✓</span>
+                                <span>Optional water features and meditation aids</span>
+                            </li>
+                        </ul>
+                        <div class="flex justify-between items-center">
+                            <span class="font-semibold">Starting at $3,200</span>
+                            <a href="#" class="text-green-700 font-medium hover:underline">Learn more →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 3 - Expanded -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden service-card transition duration-300">
+                    <img src="s3.jpeg" alt="Living wall" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Living Walls & Roofs</h3>
+                        <p class="text-gray-600 mb-4">Vertical gardens that insulate, purify air, and create stunning visual interest with minimal footprint.</p>
+                        <ul class="mb-4 space-y-2">
+                            <li class="flex items-start">
+                                <span class="text-green-600 mr-2">✓</span>
+                                <span>Structural assessment and load calculation</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-600 mr-2">✓</span>
+                                <span>Automated irrigation solutions with moisture sensors</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-600 mr-2">✓</span>
+                                <span>Sustainable materials and recycled components</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-600 mr-2">✓</span>
+                                <span>Seasonal maintenance packages available</span>
+                            </li>
+                        </ul>
+                        <div class="flex justify-between items-center">
+                            <span class="font-semibold">Starting at $75/sqft </span>
+                            <a href="#" class="text-green-700 font-medium hover:underline">Learn more →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Services -->
+            <div class="mt-16">
+                <h3 class="text-2xl font-semibold mb-8 text-center">Additional Green Solutions</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden service-card transition duration-300">
+                        <img src="s4.jpeg" alt="Moss installation" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Moss Installation</h3>
+                            <p class="text-gray-600 mb-4">Expert installation of moss carpets and panels for both indoor and outdoor spaces.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="font-semibold">Starting at $1,500</span>
+                                <a href="#" class="text-green-700 font-medium hover:underline">Learn more →</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden service-card transition duration-300">
+                        <img src="s5.jpeg" alt="Garden maintenance" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Garden Maintenance</h3>
+                            <p class="text-gray-600 mb-4">Regular upkeep services to ensure your moss and garden thrive year-round.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="font-semibold">Starting at $200/month</span>
+                                <a href="#" class="text-green-700 font-medium hover:underline">Learn more →</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden service-card transition duration-300">
+                        <img src="s6.jpeg" alt="Workshops" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Workshops & Classes</h3>
+                            <p class="text-gray-600 mb-4">Join our hands-on workshops to learn about moss gardening and sustainable practices.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="font-semibold">From $75/person</span>
+                                <a href="#" class="text-green-700 font-medium hover:underline">Learn more →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consultant Information - Expanded Content -->
+    <section class="py-16 bg-white" id="consultation">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Meet Our Expert Consultants</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="flex flex-col md:flex-row items-center bg-gray-50 p-6 rounded-lg">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Dr. Emily Tanaka</h3>
+                        <p class="text-gray-600 mb-2">PhD in Bryology (Moss Science), Kyoto University</p>
+                        <p>With over 15 years of experience in moss cultivation and preservation, Dr. Tanaka leads our technical team to ensure all installations follow ecological best practices. Her groundbreaking research on urban moss adaptation has been published in 7 peer-reviewed journals.</p>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center bg-gray-50 p-6 rounded-lg">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Marcus Chen</h3>
+                        <p class="text-gray-600 mb-2">Licensed Landscape Architect</p>
+                        <p>Marcus combines modern design sensibilities with traditional moss gardening techniques to create spaces that feel contemporary yet timeless. His projects have won 3 ASLA awards, and he's known for his innovative use of moss in unexpected urban environments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Moss Care Tips - Expanded Content -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Moss Care Tips For Your Space</h2>
+            <p class="text-center mb-12 max-w-3xl mx-auto">Proper care of your moss garden is essential for maintaining its beauty and health. Here are some expert tips to help you succeed.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Tip 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm tip-card">
+                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-tint text-green-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Proper Watering</h3>
+                    <p>Moss prefers consistent moisture but not standing water. Use a fine mist spray bottle to water 2-3 times per week depending on humidity. Early morning watering prevents midday evaporation.</p>
+                </div>
+                
+                <!-- Tip 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm tip-card">
+                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-sun text-green-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Light Requirements</h3>
+                    <p>Most moss varieties thrive in indirect sunlight or shade. Direct afternoon sun can scorch moss. Observe color changes - deep green means happy moss, while yellow suggests too much light.</p>
+                </div>
+                
+                <!-- Tip 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm tip-card">
+                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-wind text-green-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Air Circulation</h3>
+                    <p>Good airflow prevents fungal growth but avoid strong drafts. Indoor moss gardens benefit from occasional placement near an open window or use of a small circulation fan at low speed.</p>
+                </div>
+                
+                <!-- Tip 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm tip-card">
+                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-seedling text-green-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Natural Fertilizers</h3>
+                    <p>Moss absorbs nutrients through leaves so foliar feeding works best. Use diluted buttermilk (1:4 ratio with water) or weak chamomile tea as natural tonics during growing seasons.</p>
+                </div>
+                
+                <!-- Tip 5 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm tip-card">
+                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-cut text-green-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Pruning and Maintenance</h3>
+                    <p>Regularly trim any dead or overgrown moss to encourage healthy growth. Use scissors to avoid damaging the surrounding area and maintain a neat appearance.</p>
+                </div>
+                
+                <!-- Tip 6 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm tip-card">
+                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-bug text-green-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Pest Management</h3>
+                    <p>Keep an eye out for pests like aphids or mealybugs. Use insecticidal soap or neem oil as a natural remedy to keep your moss healthy and pest-free.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Section - Expanded Content -->
+    <section class="py-16 bg-white" id="feedback">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Client Feedback</h2>
+            <p class="text-center mb-12 max-w-3xl mx-auto">We take pride in our work and value the feedback from our clients. Here are some testimonials from those who have experienced the Mossleies Care difference.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <p class="italic">"Mossleies Care transformed my backyard into a peaceful retreat. The team was professional and knowledgeable!"</p>
+                    <p class="mt-4 font-semibold">- Sarah J.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <p class="italic">"I never knew moss could be so beautiful! Their design exceeded my expectations."</p>
+                    <p class="mt-4 font-semibold">- David L.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <p class="italic">"The consultation process was thorough, and the results were stunning. Highly recommend!"</p>
+                    <p class="mt-4 font-semibold">- Emily R.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <p class="italic">"Mossleies Care's attention to detail is unmatched. My garden has never looked better!"</p>
+                    <p class="mt-4 font-semibold">- John T.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section - Expanded Content -->
+    <section class="py-16 bg-gray-50" id="blog">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Latest Blog Posts</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden blog-card transition duration-300">
+                    <img src="b1.jpeg" alt="Blog Post 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">The Benefits of Moss in Urban Landscaping</h3>
+                        <p class="text-gray-600 mb-4">Discover how moss can improve air quality, reduce noise pollution, and enhance the aesthetic appeal of urban spaces.</p>
+                        <a href="#" class="text-green-700 font-medium hover:underline">Read more →</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden blog-card transition duration-300">
+                    <img src="b2.jpeg" alt="Blog Post 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Creating a Zen Garden with Moss</h3>
+                        <p class="text-gray-600 mb-4">Learn the steps to design a tranquil zen garden using moss and other natural elements for meditation and relaxation.</p>
+                        <a href="#" class="text-green-700 font-medium hover:underline">Read more →</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden blog-card transition duration-300">
+                    <img src="b3.jpeg" alt="Blog Post 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Moss Care 101: Tips for Beginners</h3>
+                        <p class="text-gray-600 mb-4">A comprehensive guide for beginners on how to care for moss gardens, including watering, light, and pest management.</p>
+                        <a href="#" class="text-green-700 font-medium hover:underline">Read more →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Form Section -->
+    <section class="py-16 bg-white" id="contact">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Feedback Form</h2>
+            <form action="#" method="POST" class="max-w-lg mx-auto">
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700 mb-2">Name</label>
+                    <input type="text" id="name" name="name" required class="form-input w-full border rounded-lg p-2">
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700 mb-2">Email</label>
+                    <input type="email" id="email" name="email" required class="form-input w-full border rounded-lg p-2">
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-gray-700 mb-2">Message</label>
+                    <textarea id="message" name="message" rows="4" required class="form-input w-full border rounded-lg p-2"></textarea>
+                </div>
+                <button type="submit" class="btn-primary px-6 py-3 rounded-full font-semibold">Submit Feedback</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Disclaimer -->
+    <section class="py-4 bg-light">
+        <div class="container mx-auto px-6">
+            <p class="disclaimer text-center">Disclaimer: Mossleies Care is not responsible for any damage caused by improper care or maintenance of moss installations. Always consult with our experts for best practices.</p>
+        </div>
+    </section>
+
+    <!-- Customer Satisfaction - Expanded Content -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Customer Satisfaction</h2>
+            <p class="text-center">At Mossleies Care, we prioritize our clients' happiness. Our commitment to quality and service ensures that every project meets your expectations. Join our community of satisfied customers today!</p>
+            <div class="flex justify-center mt-8">
+                <a href="#contact" class="btn-primary px-6 py-3 rounded-full font-semibold">Contact Us Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <footer class="py-6 bg-dark text-white">
+        <div class="container mx-auto px-6 text-center">
+            <p>Address: 242 Greene St, New York, NY 10003, USA</p>
+            <p>&copy; 2023 Mossleies Care. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>__

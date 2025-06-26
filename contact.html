@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Mossleies Care</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+        
+        :root {
+            --primary: #3a5a40;
+            --secondary: #588157;
+            --accent: #a3b18a;
+            --light: #dad7cd;
+            --dark: #344e41;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .nav-link:hover {
+            color: var(--accent) !important;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--dark);
+            transform: translateY(-2px);
+        }
+        
+        footer {
+            background-color: var(--dark);
+        }
+
+        .contact-point {
+            margin-bottom: 2rem;
+            border-left: 3px solid var(--accent);
+            padding-left: 1rem;
+        }
+
+        .form-input:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 2px rgba(163,  184, 138, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <div>
+                        <span class="text-2xl font-bold text-gray-800">Moss<span class="text-green-700">leies</span> Care</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-800 nav-link font-medium">Home</a>
+                    <a href="privacy.html" class="text-gray-800 nav-link font-medium">Privacy</a>
+                    <a href="terms.html" class="text-gray-800 nav-link font-medium">Terms & Conditions</a>
+                    <a href="cookies.html" class="text-gray-800 nav-link font-medium">Cookies</a>
+                    <a href="contact.html" class="text-green-700 nav-link font-medium" aria-current="page">Contact Us</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="outline-none mobile-menu-button">
+                        <svg class="w-6 h-6 text-gray-800" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                            <path d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="hidden mobile-menu">
+            <ul>
+                <li><a href="index.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Home</a></li>
+                <li><a href="privacy.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Privacy</a></li>
+                <li><a href="terms.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Terms</a></li>
+                <li><a href="cookies.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Cookies</a></li>
+                <li><a href="contact.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100" aria-current="page">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contact Form -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl font-bold text-center mb-12">Contact Us</h1>
+            <p class="text-center mb-12 max-w-3xl mx-auto">We would love to hear from you! Please fill out the form below to get in touch with us.</p>
+            <form action="#" method="POST" class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                        <input type="text" id="name" name="name" required class="form-input mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                        <input type="email" id="email" name="email" required class="form-input mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                    <textarea id="message" name="message" rows="4" required class="form-input mt-1 block w-full border-gray-300 rounded-md shadow-sm"></textarea>
+                </div>
+                <div class="mt-6">
+                    <button type="submit" class="btn-primary px-4 py-2 rounded-md">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="py-16 bg-light">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-8">Get in Touch</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="contact-point">
+                    <h3 class="text-2xl font-semibold mb-3">1. Our Location</h3>
+                    <p>We are located at 242 Greene St, New York, NY 10003, USA. Feel free to visit us during our business hours. We are always happy to meet our clients in person and discuss their gardening needs.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3 class="text-2xl font-semibold mb-3">2. Phone Support</h3>
+                    <p>You can reach us by phone at (212) 555-0198. Our customer service team is available from 9 AM to 5 PM EST, Monday through Friday. We are here to answer any questions you may have about our services or to assist you with your inquiries.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3 class="text-2xl font-semibold mb-3">3. Email Communication</h3>
+                    <p>If you prefer to communicate via email, you can contact us at support@mossleiescare.com. We strive to respond to all emails within 24 hours. Please provide as much detail as possible in your message to help us assist you better.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3 class="text-2xl font-semibold mb-3">4. Social Media</h3>
+                    <p>Follow us on our social media platforms to stay updated on our latest services, promotions, and gardening tips. You can find us on Facebook, Instagram, and Twitter. We love engaging with our community and sharing our passion for gardening.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3 class="text-2xl font-semibold mb-3">5. Business Hours</h3>
+                    <p>Our business hours are Monday to Friday from 9 AM to 5 PM EST. We are closed on weekends and public holidays. If you need assistance outside of these hours, please leave us a message, and we will get back to you as soon as possible.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3 class="text-2xl font-semibold mb-3">6. Feedback and Suggestions</h3>
+                    <p>Your feedback is important to us! If you have any suggestions or comments about our services, please let us know. We are always looking for ways to improve and provide the best experience for our clients.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3 class="text-2xl font-semibold mb-3">7. Service Areas</h3>
+                    <p>We proudly serve the New York City area and surrounding neighborhoods. If you are unsure whether we service your area, please contact us, and we will be happy to assist you.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3 class="text-2xl font-semibold mb-3">8. Consultation Services</h3>
+                    <p>We offer free consultations for new clients. If you are interested in our gardening services, please reach out to schedule a consultation. We will discuss your needs and provide you with a tailored plan to achieve your gardening goals.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3 class="text-2xl font-semibold mb-3">9. Emergency Services</h3>
+                    <p>In case of emergency gardening needs, such as storm damage or urgent repairs, please contact us immediately. We will do our best to accommodate your request and provide timely assistance.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3 class="text-2xl font-semibold mb-3">10. Community Involvement</h3>
+                    <p>We believe in giving back to the community. Mossleies Care participates in local events and initiatives to promote gardening and environmental awareness. Stay tuned for upcoming events where you can join us!</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3 class="text-2xl font-semibold mb-3">11. Gardening Workshops</h3>
+                    <p>We offer workshops for those interested in learning more about gardening techniques and best practices. These workshops are open to all skill levels and provide hands-on experience. Check our website for upcoming workshop dates.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3 class="text-2xl font-semibold mb-3">12. Sustainability Practices</h3>
+                    <p>At Mossleies Care, we are committed to sustainable gardening practices. We use eco-friendly products and techniques to minimize our environmental impact. If you have questions about our sustainability efforts, feel free to ask!</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3 class="text-2xl font-semibold mb-3">13. Plant Care Tips</h3>
+                    <p>We love sharing our knowledge about plant care! If you have specific questions about your plants or garden, don’t hesitate to reach out. Our team is here to provide you with expert advice and tips.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3 class="text-2xl font-semibold mb-3">14. Seasonal Services</h3>
+                    <p>Our services vary by season, and we offer specialized services for spring planting, summer maintenance, fall clean-up, and winter preparation. Contact us to learn more about our seasonal offerings and how we can help you year-round.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3 class="text-2xl font-semibold mb-3">15. Landscaping Design</h3>
+                    <p>We provide professional landscaping design services to help you create the garden of your dreams. Our team will work with you to design a space that reflects your style and meets your needs. Schedule a consultation to get started!</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3 class="text-2xl font-semibold mb-3">16. Pest Control Services</h3>
+                    <p>Our pest control services are designed to protect your garden from harmful pests while being safe for the environment. If you notice any pest issues, please contact us for an assessment and treatment options.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3 class="text-2xl font-semibold mb-3">17. Lawn Care Services</h3>
+                    <p>We offer comprehensive lawn care services, including mowing, fertilization, aeration, and weed control. A healthy lawn is essential for a beautiful garden, and our team is here to help you maintain it.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3 class="text-2xl font-semibold mb-3">18. Mulching Services</h3>
+                    <p>Mulching is an important part of garden maintenance. We provide mulching services to help retain moisture, suppress weeds, and improve the overall appearance of your garden. Contact us to learn more about our mulching options.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3 class="text-2xl font-semibold mb-3">19. Tree and Shrub Care</h3>
+                    <p>Our team is experienced in tree and shrub care, including pruning, trimming, and health assessments. Healthy trees and shrubs enhance the beauty of your landscape, and we are here to help you keep them thriving.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3 class="text-2xl font-semibold mb-3">20. Irrigation Services</h3>
+                    <p>We offer irrigation installation and maintenance services to ensure your garden receives the right amount of water. Proper irrigation is crucial for plant health, and our team can help you set up an efficient system.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3 class="text-2xl font-semibold mb-3">21. Hardscaping Services</h3>
+                    <p>In addition to gardening, we provide hardscaping services, including patios, walkways, and retaining walls. Our hardscaping solutions can enhance the functionality and aesthetics of your outdoor space.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3 class="text-2xl font-semibold mb-3">22. Garden Maintenance Plans</h3>
+                    <p>We offer customizable garden maintenance plans to fit your specific needs and budget. Whether you need weekly, bi-weekly, or monthly services, we can create a plan that works for you.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3 class="text-2xl font-semibold mb-3">23. Seasonal Clean-Up</h3>
+                    <p>Our seasonal clean-up services help prepare your garden for the changing seasons. We will remove debris, trim plants, and ensure your garden is ready for the next season's growth.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3 class="text-2xl font-semibold mb-3">24. Garden Design Consultation</h3>
+                    <p>If you're looking to redesign your garden, we offer consultation services to help you create a beautiful and functional outdoor space. Our team will work with you to understand your vision and provide expert guidance.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3 class="text-2xl font-semibold mb-3">25. Community Gardening Initiatives</h3>
+                    <p>We are involved in community gardening initiatives to promote green spaces and gardening education. If you're interested in participating or learning more, please reach out to us.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3 class="text-2xl font-semibold mb-3">26. Gardening Resources</h3>
+                    <p>We provide a variety of gardening resources on our website, including articles, guides, and tips. These resources are designed to help you become a better gardener and make informed decisions about your garden.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3 class="text-2xl font-semibold mb-3">27. Plant Selection Assistance</h3>
+                    <p>Choosing the right plants for your garden can be challenging. Our team is here to assist you in selecting plants that will thrive in your specific environment and meet your aesthetic preferences.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3 class="text-2xl font-semibold mb-3">28. Organic Gardening Practices</h3>
+                    <p>We promote organic gardening practices to help you grow healthy plants without harmful chemicals. If you're interested in transitioning to organic gardening, we can provide guidance and support.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3 class="text-2xl font-semibold mb-3">29. Garden Planning Services</h3>
+                    <p>Our garden planning services help you create a detailed plan for your garden, including layout, plant selection, and maintenance schedules. We will work with you to ensure your garden meets your goals and vision.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3 class="text-2xl font-semibold mb-3">30. Pest Management Strategies</h3>
+                    <p>Effective pest management is crucial for a healthy garden. We offer strategies and solutions to help you manage pests while minimizing harm to beneficial insects and the environment.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3 class="text-2xl font-semibold mb-3">31. Soil Testing Services</h3>
+                    <p>Understanding your soil is key to successful gardening. We offer soil testing services to assess nutrient levels and pH, helping you make informed decisions about soil amendments and plant selection.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3 class="text-2xl font-semibold mb-3">32. Garden Renovation Services</h3>
+                    <p>If your garden needs a refresh, we provide renovation services to revitalize your outdoor space. Our team will assess your garden and recommend changes to improve its appearance and health.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3 class="text-2xl font-semibold mb-3">33. Landscape Lighting Solutions</h3>
+                    <p>Enhance the beauty of your garden at night with our landscape lighting solutions. We can design and install lighting that highlights your garden's features and creates a welcoming atmosphere.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3 class="text-2xl font-semibold mb-3">34. Water Feature Installation</h3>
+                    <p>Water features can add tranquility and beauty to your garden. We offer installation services for ponds, fountains, and other water features to enhance your outdoor space.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3 class="text-2xl font-semibold mb-3">35. Garden Art and Decor</h3>
+                    <p>Incorporating art and decor into your garden can create a unique and personal space. We can help you select and install garden art that complements your style and enhances your garden's beauty.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3 class="text-2xl font-semibold mb-3">36. Seasonal Planting Guides</h3>
+                    <p>We provide seasonal planting guides to help you know what to plant and when. These guides are tailored to our local climate and conditions, ensuring your garden thrives throughout the year.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3 class="text-2xl font-semibold mb-3">37. Garden Maintenance Tips</h3>
+                    <p>Our team is happy to share maintenance tips to help you keep your garden looking its best. From watering schedules to pruning techniques, we provide valuable information to support your gardening efforts.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3 class="text-2xl font-semibold mb -3">38. Community Gardening Events</h3>
+                    <p>We host community gardening events to bring people together and promote gardening as a rewarding hobby. These events include workshops, plant swaps, and community clean-up days. Join us to meet fellow gardening enthusiasts and learn new skills!</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3 class="text-2xl font-semibold mb-3">39. Gardening FAQs</h3>
+                    <p>We have compiled a list of frequently asked questions about gardening to help you find quick answers. Whether you have questions about plant care, pest control, or landscaping, our FAQs cover a wide range of topics to assist you.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3 class="text-2xl font-semibold mb-3">40. Conclusion</h3>
+                    <p>Thank you for considering Mossleies Care for your gardening needs. We are dedicated to providing exceptional service and support to our clients. If you have any questions or would like to learn more about our services, please do not hesitate to contact us.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 bg-dark text-white">
+        <div class="container mx-auto px-6 text-center">
+            <p>Address: 242 Greene St, New York, NY 10003, USA</p>
+            <p>Phone: (212) 555-0198</p>
+            <p>&copy; 2023 Mossleies Care. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
